@@ -6,6 +6,8 @@ Singleton pattern is a design solution where an application wants to have one an
 
 == Code ==
 
+Singleton class:
+
 {{{
 /**
  * Singleton class. This class represents all of the `Singleton` design pattern based on Bill Pugh solution.
@@ -47,4 +49,30 @@ public class Singleton {
 		System.out.println("Print method");
 	}
 }
+}}}
+
+Main class:
+
+{{{
+/**
+	 * Main function.
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Getting the singleton instance at first time. In this case the singleton's constructor is called. 
+		Singleton singletonInstance1 = Singleton.getInstance();
+		singletonInstance1.print();
+
+		// Getting another instance of the singleton. In this case the singleton's constructor isn't called.
+		Singleton singletonInstance2 = Singleton.getInstance();
+		singletonInstance2.print();
+	}
+}}}
+
+Output:
+
+{{{
+Singleton's constructor
+Print method
+Print method
 }}}
