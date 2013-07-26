@@ -1,0 +1,26 @@
+= Singleton (Bill Pugh solution) =
+
+== Motivation ==
+
+Singleton pattern is a design solution where an application wants to have one and only one instance of any class, in all possible scenarios without any exceptional condition. It has been debated long enough in java community regarding possible approaches to make any class singleton. Still, you will find people not satisfied with any solution you give. They can not be overruled either. In this post, we will discuss some good approaches and will work towards our best possible effort.
+
+== Code ==
+
+{{{
+public class Singleton {
+        // Private constructor prevents instantiation from other classes
+        private Singleton() { }
+ 
+        /**
+        * SingletonHolder is loaded on the first execution of Singleton.getInstance() 
+        * or the first access to SingletonHolder.INSTANCE, not before.
+        */
+        private static class SingletonHolder { 
+                public static final Singleton INSTANCE = new Singleton();
+        }
+ 
+        public static Singleton getInstance() {
+                return SingletonHolder.INSTANCE;
+        }
+}
+}}}
