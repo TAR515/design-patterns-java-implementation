@@ -2,7 +2,13 @@
 
 == Description ==
 
-Separate the algorithm for interpreting (i.e. reading and parsing) a stored persistence mechanism (e.g. RTF files) from the algorithm for building and representing one of many target products (e.g. ASCII, TeX, text widget). The focus/distinction is on creating complex aggregates.
+The Builder design pattern allows to create a complex object step by step and also enforces a process to create an object as a finished product. The construction of the object should be such that the same construction process can create different representations. Director controls the construction of the object and only the director knows what type of object to create.
+
+For example, you can consider printing of a book. Printing of a book involves various steps such as printing the table of contents, preface, introduction, chapters, and conclusion. Finally you will get a complete book object. With the help of the same process, you can print books with different properties. 
+
+As described by Gof:
+
+"Separate the construction of a complex object from its representation so that the same construction process can create different representations" 
 
 
 == Structure Diagram ==
