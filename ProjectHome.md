@@ -1,0 +1,1 @@
+This project contains may design patterns implemented in Java.
